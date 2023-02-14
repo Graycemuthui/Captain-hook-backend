@@ -1,13 +1,12 @@
 class CreateOrders < ActiveRecord::Migration[7.0]
   def change
     create_table :orders do |t|
-      t.integer :amount
-      t.string :order_number
-      t.string :payment_method
+      t.integer :total_price
       t.string :status
-      t.date :order_date
-
+      t.string :payment_method
+      t.string :shipping_address
       t.timestamps
     end
+    add_foreign_key :orders, :customers
   end
 end
