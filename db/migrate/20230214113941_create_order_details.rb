@@ -6,7 +6,5 @@ class CreateOrderDetails < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
-    add_foreign_key :order_details, :orders
-    add_foreign_key :order_details, :products
   end
 end

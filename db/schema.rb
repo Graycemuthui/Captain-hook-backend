@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_14_140726) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_01_134143) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
@@ -32,6 +39,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_140726) do
     t.integer "unit_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "product_id"
+    t.bigint "order_id"
+    t.index ["order_id"], name: "index_order_details_on_order_id"
+    t.index ["product_id"], name: "index_order_details_on_product_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -56,5 +67,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_140726) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "amount"
+    t.string "payment_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "order_id"
+    t.index ["order_id"], name: "index_transactions_on_order_id"
+  end
+
+  add_foreign_key "order_details", "orders"
+  add_foreign_key "order_details", "products"
   add_foreign_key "orders", "customers"
+  add_foreign_key "transactions", "orders"
 end
