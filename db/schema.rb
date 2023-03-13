@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_02_153531) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_13_091427) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,8 +50,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_153531) do
     t.string "shipping_address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "customer_id"
-    t.index ["customer_id"], name: "index_orders_on_customer_id"
+    t.bigint "customers_id"
+    t.index ["customers_id"], name: "index_orders_on_customers_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -78,6 +78,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_153531) do
 
   add_foreign_key "order_details", "orders"
   add_foreign_key "order_details", "products"
-  add_foreign_key "orders", "customers"
+  add_foreign_key "orders", "customers", column: "customers_id"
   add_foreign_key "transactions", "orders"
 end

@@ -7,6 +7,5 @@ class CreateOrders < ActiveRecord::Migration[7.0]
       t.string :shipping_address
       t.timestamps
     end
-    add_foreign_key :orders, :customers
   end
 end
