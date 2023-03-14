@@ -1,4 +1,4 @@
-class OrderDetailsController < ApplicationController
+class  Api::V1::OrderDetailsController < ApplicationController
   before_action :set_order_detail, only: %i[ show edit update destroy ]
 
   # GET /order_details or /order_details.json

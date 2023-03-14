@@ -1,4 +1,4 @@
-class CustomersController < ApplicationController
+class  Api::V1::CustomersController < ApplicationController
   # GET /orders or /orders.json
   def index
     @customers = Customer.all
