@@ -37,6 +37,6 @@ def update
   private
 
   def order_detail_params
-    params.require(:order_detail).permit(:quantity, :unit_price)
+    params.require(:order_detail).permit(:order_id, :product_id, :quantity, :unit_price)
   end
 end
