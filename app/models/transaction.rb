@@ -1,3 +1,3 @@
 class Transaction < ApplicationRecord
-has-many :orders
+  has_many :orders
 end
