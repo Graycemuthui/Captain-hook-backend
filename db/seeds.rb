@@ -1,19 +1,5 @@
-Customer.destroy_all
 Order.destroy_all
 Product.destroy_all
-
-customer = Customer.create([
-                             { first_name: 'John', last_name: 'Legend', email: 'johnlegend20@gmail.com', address: '23000-38920 Vale Avenue',
-                               city: 'Kisumu', country: 'Kenya' },
-                             { first_name: 'Peter', last_name: 'Jones', email: 'peterjones@gmail.com', address: '23342-38432 Wood Avenue',
-                               city: 'Machakos', country: 'Kenya' },
-                             { first_name: 'Sandra', last_name: 'Mutinda', email: 'sandramutinda@gmail.com', address: '23131=23422 Kiwi Avenue',
-                               city: 'Eldoret', country: 'Kenya' },
-                             { first_name: 'Kisawe', last_name: 'Muivs', email: 'kisawemuivs20@gmail.com', address: '02392-39103 Losi Avenue',
-                               city: 'Nairobi', country: 'Kenya' },
-                             { first_name: 'Shaquille', last_name: 'Ndunda', email: 'johnlegend20@gmail.com', address: '39403-98394 Boko Avenue',
-                               city: 'Musinga', country: 'Kenya' }
-                           ])
 
 order = Order.create([
                        { total_price: Regexp.last_match(1000), status: 'Paid', payment_method: 'Visa',
