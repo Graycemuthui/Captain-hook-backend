@@ -39,19 +39,19 @@ Run:
 
 | Endpoint | Functionality |
 
-To create a new customer, send a POST request to http://localhost:3000/api/v1/customers with the following body:
+To create a new customer, send a POST request to http://127.0.0.1:3000/api/v1/customers with the following body:
 
 `{ first_name: 'John', last_name: 'Legend', email: 'johnlegend20@gmail.com', address: '23000-38920 Vale Avenue', city: 'Kisumu', country: 'Kenya' }`
 
-To create a new orders, send a POST request to http://localhost:3000/api/v1/orders with the following body:
+To create a new orders, send a POST request to http://127.0.0.1:3000/api/v1/orders with the following body:
 
 ` { total_price: Regexp.last_match(1000), status: 'Paid', payment_method: 'Visa', shipping_address: '23000-38920 Vale Avenue' }`
 
-To create a new products, send a POST request to http://localhost:3000/api/v1/products with the following body:
+To create a new products, send a POST request to http://127.0.0.1:3000/api/v1/products with the following body:
 
 ` { name: "Michael Angelo's painting", description: "Michael Angelo's painting on top of the Palace of Versailles", price: Regexp.last_match(1000), stock: 1, image_url'https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60', category: 'art' }`
 
-To get all customers, send a GET request to http://localhost:3000/api/v1/customers
+To get all customers, send a GET request to http://127.0.0.1:3000/api/v1/customers
 
 The response will be an array of all customers.
 
@@ -63,7 +63,7 @@ The response will be an array of all customers.
                          city: 'Musinga', country: 'Kenya' }
                               ]`
 
-To get all orders, send a GET request to http://localhost:3000/api/v1/orders
+To get all orders, send a GET request to http://127.0.0.1:3000/api/v1/orders
 
 The response will be an array of all orders.
 
@@ -75,7 +75,7 @@ The response will be an array of all orders.
                          shipping_address: '23342-38432 Wood Avenue' },
                               ]`
 
-To get all products, send a GET request to http://localhost:3000/api/v1/products
+To get all products, send a GET request to http://127.0.0.1:3000/api/v1/products
 
 The response will be an array of all orders.
 
@@ -85,19 +85,19 @@ The response will be an array of all orders.
                       { name: 'Flowers painting', description: 'Flowers in a Metal Vase', price: Regexp.last_match(750), stock: 1, image_url: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=445&q=80', category: 'art' },
                               ]`
 
-To delete a orders, send a DELETE request to http://localhost:3000/api/v1/orders/:id
+To delete a orders, send a DELETE request to http://127.0.0.1:3000/api/v1/orders/:id
 
 Example :
 
 ` fetch(`api/v1/orders/${order.id}`, { method: "DELETE", headers: { "Content-Type": "application/json", }, });`
 
-To delete a customer, send a DELETE request to http://localhost:3000/api/v1/customers/:id
+To delete a customer, send a DELETE request to http://127.0.0.1:3000/api/v1/customers/:id
 
 Example:
 
 ` fetch(`/api/v1/customers/${customer.id}`, { method: "DELETE", headers: { "Content-Type": "application/json", }, })`
 
-To delete a product, send a DELETE request to http://localhost:3000/api/v1/products/:id
+To delete a product, send a DELETE request to http://127.0.0.1:3000/api/v1/products/:id
 
 Example:
 
