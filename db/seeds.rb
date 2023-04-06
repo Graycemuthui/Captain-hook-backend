@@ -23,7 +23,7 @@ product = Product.create([
                            { name: 'Hand painting', description: 'Hand reaching out', price: 500, stock: 1,
                              image_url: 'https://images.unsplash.com/photo-1501472312651-726afe119ff1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', category: 'art' },
                            { name: 'Where did you go?',
-                             description: ' A painiting tha shows someone entrapped in their own thoughts', price: 800, stock: 1, image_url: 'https://images.unsplash.com/photo-1559102877-4a2cc0e37fce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGFydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60', category: 'art' },
+                             description: ' A painting that shows someone entrapped in their own thoughts', price: 800, stock: 1, image_url: 'https://images.unsplash.com/photo-1559102877-4a2cc0e37fce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGFydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60', category: 'art' },
                            { name: 'Woman in nature', description: 'A woman potrayed in nature', price: 1000,
                              stock: 1, image_url: 'https://images.unsplash.com/photo-1613957871189-f6165548ae02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA4fHxhcnR8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60', category: 'art' }
                          ])
